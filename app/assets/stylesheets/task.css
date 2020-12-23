@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+/* トップページ header*/
+
+.task-header{
+   display: flex;
+   justify-content: space-between;
+   background-color: #C4EAFA;
+   padding: 0 10px;
+}
+
+.title{
+   font-family: 'Lato', sans-serif;
+}
+
+.message{
+   position: relative;
+   top: 30px;
+   left: 300px;
+}
