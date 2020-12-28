@@ -7,14 +7,40 @@
    justify-content: space-between;
    background-color: #C4EAFA;
    padding: 0 10px;
+   height: 100px;
+   box-shadow: 2px 2px 4px gray;
 }
 
 .title{
    font-family: 'Lato', sans-serif;
+   font-size: 1.7em;
+}
+
+.title a{
+    color: black;
+    position: relative;
+}
+
+.title a::before{
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #2c5de4;
+    transition: width 0.4s;
+  }
+
+.title a:hover::before {
+    width: 100%;
 }
 
 .message{
    position: relative;
-   top: 30px;
-   left: 300px;
+   top: 50px;
+   left: 320px;
 }
+
+

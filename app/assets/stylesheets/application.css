@@ -16,22 +16,23 @@
 
  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
- /* トップページ header*/
+ @charset "UTF-8";
 
- .task-header{
-    display: flex;
-    justify-content: space-between;
-    background-color: #C4EAFA;
-    padding: 0 10px;
+ /* 共通 */
+
+ html {
+     font-size: 100%;
  }
 
- .title{
-    font-family: 'Lato', sans-serif;
+ body {
+     font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3",sans-serif;
+     line-height: 1.7;
  }
 
- .message{
-    position: relative;
-    top: 30px;
-    left: 300px;
+ a {
+     text-decoration: none;
  }
- 
+
+ img {
+     max-width: 100%;
+ }
