@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+
+ @charset "UTF-8";
+
+ /* 共通 */
+
+ *{
+    box-sizing: border-box;
+ }
+
+ html {
+     font-size: 100%;
+ }
+
+ body {
+     font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3",sans-serif;
+     line-height: 1.7;
+     margin: 0;
+     background-image: url('419677_l.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+
+ a {
+     text-decoration: none;
+ }
+
+ 
+ 

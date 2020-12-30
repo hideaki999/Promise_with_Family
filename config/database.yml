@@ -14,7 +14,7 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: taka1534
+  password: <%= Rails.application.credentials.database[:password] %>
   socket: /tmp/mysql.sock
 
 development:
@@ -53,3 +53,5 @@ production:
   database: Promise_with_Family_production
   username: Promise_with_Family
   password: <%= ENV['PROMISE_WITH_FAMILY_DATABASE_PASSWORD'] %>
+
+  
