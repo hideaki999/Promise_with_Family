@@ -34,11 +34,10 @@
      background-image: url('419677_l.jpg');
      background-repeat: no-repeat;
      background-size: cover;
+     background-attachment: fixed;
  }
 
  a {
      text-decoration: none;
  }
-
- 
  
