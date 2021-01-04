@@ -4,9 +4,25 @@
     <div class="task_main task_main_left">
         <div class=task_explanation>
             <p>1,家族タスク作成をクリック</p>
+            <p>2,家族タスクを実行するだけ</p>
+        </div>
+        <div class="button">
+            <div class="create_button">
+                <%= link_to root_path ,class: "btn btn-yellow btn-radius btn-cubic" do %>
+                    <i class="fas fa-angle-right fa-position-right"></i>+家族タスク作成
+                <% end %>
+            </div>
+
+            <div class="logout_button">
+                <%= link_to root_path ,class: "btn btn-blue btn-radius btn-cubic" do %>
+                    <i class="fas fa-angle-right fa-position-right"></i>ログアウト
+                <% end %>
+            </div>
         </div>
     </div>
     <div class="task_main task_main_liget">
-
+        <div class=task_explanation>
+            <h2>家族との約束</h2>
+        </div>
     </div>
 </main>
