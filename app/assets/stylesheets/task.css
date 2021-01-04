@@ -120,3 +120,40 @@ a.btn-blue.btn-cubic {
     top: calc(50% - .5em);
     right: 1rem;
 }
+
+
+.task{
+    border: 1px solid;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color: rgb(244, 253, 253);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    padding: 0 10px;
+}
+
+.task h3{
+    text-decoration : underline;
+    position: relative;
+    left: 25px;
+}
+
+ h3::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: .5em;
+    left: -1.5em;
+    width: 10px;
+    height: 5px;
+    border-left: 2px solid #ac0000;
+    border-bottom: 2px solid #ac0000;
+    transform: rotate(-45deg);
+  }
+
+.task div{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
