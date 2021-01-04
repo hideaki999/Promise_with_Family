@@ -133,6 +133,12 @@ a.btn-blue.btn-cubic {
     padding: 0 10px;
 }
 
+.task .task_time{
+    text-align: right;
+    padding: 0;
+    margin: 1px 0 0 0;
+}
+
 .task h3{
     text-decoration : underline;
     position: relative;
