@@ -157,3 +157,18 @@ a.btn-blue.btn-cubic {
     justify-content: space-between;
     padding: 0 10px;
 }
+
+.task div p{
+    display: flex;
+}
+
+.task_edit{
+    display:block;
+    margin-right: 20px;
+    color: #038698;
+}
+
+.task_delete{
+    display:block;
+    color: #038698;
+}
