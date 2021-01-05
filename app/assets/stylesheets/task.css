@@ -158,12 +158,12 @@ a.btn-blue.btn-cubic {
     transform: rotate(-45deg);
   }
 
-.task div{
+.task .task_edit_delete{
     display: flex;
     justify-content: space-between;
 }
 
-.task div p{
+.task .task_edit_delete p{
     display: flex;
 }
 
