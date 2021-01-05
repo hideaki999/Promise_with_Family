@@ -50,19 +50,19 @@
  main{
      height: 100vh;
      width: 100%;
+     display: flex;
  }
  
  .task_main{
-     position:absolute;
      width:50%;
      height:100%;
  }
  
- .task_main_left{
+ .task_main_task_create_logout{
      left:0;
  }
  
- .task_main_liget{
+ .task_main_family_promise{
      right:0;
      overflow-y:scroll;
  }
@@ -139,13 +139,13 @@ a.btn-blue.btn-cubic {
     margin: 1px 0 0 0;
 }
 
-.task h3{
+.task .task_title{
     text-decoration : underline;
     position: relative;
     left: 25px;
 }
 
- h3::after {
+.task_title::after {
     content: '';
     display: block;
     position: absolute;
