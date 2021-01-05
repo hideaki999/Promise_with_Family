@@ -130,7 +130,7 @@ a.btn-blue.btn-cubic {
     background-color: rgb(244, 253, 253);
     border-radius: 1rem;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
-    padding: 0 10px;
+    padding: 0 25px;
 }
 
 .task .task_time{
@@ -161,7 +161,6 @@ a.btn-blue.btn-cubic {
 .task div{
     display: flex;
     justify-content: space-between;
-    padding: 0 10px;
 }
 
 .task div p{
