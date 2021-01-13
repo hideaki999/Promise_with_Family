@@ -1,0 +1,107 @@
+.task_create_title{
+    text-align: center;
+    padding-top: 100px;
+    width: 100%;
+}
+
+.form_task_new{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.form_task_new form{
+    font-size: 1.5em;
+}
+
+.task_request{
+    margin-left: 10px;
+}
+
+
+.form {
+    padding: 30px 60px;
+}
+
+.form div{
+    display: flex;
+    justify-content: center;
+}
+
+.form dl{
+    width: 50%;
+}
+
+.form dl dt {
+    width: 100px;
+    float: left;
+    clear: both;
+}
+
+.form dl dd{
+    margin-bottom: 50px;
+}
+
+#contact .form dl dd {
+    padding: 10px 0;
+}
+
+.form .name {
+    width: 240px;
+    height: 20px;
+}
+
+.form .email {
+    width: 300px;
+    height: 20px;
+}
+
+.form .tel {
+    width: 240px;
+    height: 20px;
+}
+
+.form .message {
+    width: 360px;
+    height: 150px;
+}
+
+.form button {
+    background-color: #C4EAFA;
+    color: #000000;
+    border:1px solid #ccc;
+    font-size: 1em;
+    width: 200px;
+    display: block;
+    line-height: 40px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+}
+
+.form button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.task_day{
+    margin-right: 10px;
+}
+
+.task_time{
+    margin: 0 10px;
+}
+
+.form_children input{
+    border-radius: 5px;
+    border:1px solid #ccc;
+}
+
+.form_children select{
+    border-radius: 5px;
+    border:1px solid #ccc;
+}
+
+.form_children textarea{
+    border-radius: 5px;
+    border:1px solid #ccc;
+}
