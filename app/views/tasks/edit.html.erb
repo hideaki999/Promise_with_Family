@@ -1,0 +1,37 @@
+<%= render "header"%>
+
+
+<div class="task_new">
+    <h1 class="task_edit_main_title">家族タスク編集</h1>
+<div>
+
+<form action="#" method="post" class="form task_edit_form">
+  <div class="form_children task_edit_form_children">
+    <dl>
+        <dt><span class="task_title task_edit_title">タイトル</span></dt>
+            <dd>
+            <input type="text" name="yourname" style=" width: 500px; height: 30px;">
+            </dd>
+        <dt><span class="task_request task_edit_request">依頼者</span></dt>
+            <dd>
+                <select class="task_request_person task_edit_request_person" name="sushi">
+                    <option value="wife">妻</option>
+                    <option value="son">息子</option>
+                    <option value="daughter">娘</option>
+                </select>
+            </dd>
+        <dt class="task_deadline task_edit_deadline">期限</dt>
+            <dd>
+            <label><span class="task_day task_edit_day">日付</span><input type="date"></label>
+            <label><span class="task_time task_edit_time">時間</span><input type="time" name="example1"></label>
+            </dd>
+        <dt class="task_details task_edit_details">詳細</dt>
+            <dd>
+                <textarea name="kansou" rows="4" style=" width: 500px; height: 100px;"></textarea>
+            </dd>
+    </dl>
+  </div>
+        <div class="form_button task_edit_form_button">
+            <button type="submit">送信</button>
+        </div>
+</form>

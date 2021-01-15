@@ -1,4 +1,10 @@
-.task_create_title{
+.task_create_main_title{
+    text-align: center;
+    padding-top: 100px;
+    width: 100%;
+}
+
+.task_edit_main_title{
     text-align: center;
     padding-top: 100px;
     width: 100%;
@@ -14,7 +20,7 @@
     font-size: 1.5em;
 }
 
-.task_request{
+.task_request_person{
     margin-left: 10px;
 }
 
