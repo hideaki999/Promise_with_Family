@@ -21,7 +21,7 @@
 }
 
 .task_request_person{
-    margin-left: 10px;
+    height: 30px;
 }
 
 
@@ -75,7 +75,7 @@
 .form button {
     background-color: #C4EAFA;
     color: #000000;
-    border:1px solid #ccc;
+    border:1px solid #000;
     font-size: 1em;
     width: 200px;
     display: block;
@@ -100,6 +100,7 @@
 .form_children input{
     border-radius: 5px;
     border:1px solid #ccc;
+    height: 30px;
 }
 
 .form_children select{

@@ -7,13 +7,13 @@
 
 <form action="#" method="post" class="form task_edit_form">
   <div class="form_children task_edit_form_children">
-    <dl>
-        <dt><span class="task_title task_edit_title">タイトル</span></dt>
-            <dd>
+    <dl class="form_task_list">
+        <dt class="form_task_term_title"><span class="task_title task_edit_title">タイトル</span></dt>
+            <dd class="task_edit_title_area">
             <input type="text" name="yourname" style=" width: 500px; height: 30px;">
             </dd>
-        <dt><span class="task_request task_edit_request">依頼者</span></dt>
-            <dd>
+        <dt class="form_task_term_request"><span class="task_request task_edit_request">依頼者</span></dt>
+            <dd class="task_edit_request_persons_area">
                 <select class="task_request_person task_edit_request_person" name="sushi">
                     <option value="wife">妻</option>
                     <option value="son">息子</option>
@@ -21,17 +21,17 @@
                 </select>
             </dd>
         <dt class="task_deadline task_edit_deadline">期限</dt>
-            <dd>
+            <dd class="task_edit_day_time_area">
             <label><span class="task_day task_edit_day">日付</span><input type="date"></label>
             <label><span class="task_time task_edit_time">時間</span><input type="time" name="example1"></label>
             </dd>
         <dt class="task_details task_edit_details">詳細</dt>
-            <dd>
-                <textarea name="kansou" rows="4" style=" width: 500px; height: 100px;"></textarea>
+            <dd class="task_edit_details_area">
+                <textarea name="details" rows="4" style=" width: 500px; height: 100px;"></textarea>
             </dd>
     </dl>
   </div>
         <div class="form_button task_edit_form_button">
-            <button type="submit">送信</button>
+            <button type="submit" class="task_edit_submit_button">送信</button>
         </div>
 </form>
