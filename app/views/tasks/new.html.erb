@@ -10,24 +10,24 @@
     <dl class="form_task_list">
         <dt class="form_task_term_title"><span class="task_title task_create_title">タイトル</span></dt>
             <dd class="task_create_title_area">
-            <input type="text" name="yourname" style=" width: 500px; height: 30px;">
+            <input type="text" name="yourname" class="task_textbox">
             </dd>
         <dt class="form_task_term_request"><span class="task_request task_create_request">依頼者</span></dt>
             <dd class="task_create_request_persons_area">
                 <select class="task_request_person task_create_request_person" name="sushi">
-                    <option value="wife">妻</option>
-                    <option value="son">息子</option>
-                    <option value="daughter">娘</option>
+                    <option value="wife" class="task_create_request_wife">妻</option>
+                    <option value="son" class="task_create_request_son">息子</option>
+                    <option value="daughter" class="task_create_request_daughter">娘</option>
                 </select>
             </dd>
         <dt class="task_deadline task_create_deadline">期限</dt>
             <dd class="task_create_day_time_area">
-            <label><span class="task_day task_create_day">日付</span><input type="date"></label>
-            <label><span class="task_time task_create_time">時間</span><input type="time" name="example1"></label>
+            <label><span class="task_day task_create_day">日付</span><input type="date" class="task_date"></label>
+            <label><span class="task_time task_create_time">時間</span><input type="time" name="task_time" class="task_time"></label>
             </dd>
         <dt class="task_details task_create_details">詳細</dt>
             <dd class="task_create_details_area">
-                <textarea name="details" rows="4" style=" width: 500px; height: 100px;"></textarea>
+                <textarea name="details" class="task_textarea"></textarea>
             </dd>
     </dl>
   </div>
