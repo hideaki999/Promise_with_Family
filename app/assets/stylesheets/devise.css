@@ -1,0 +1,29 @@
+.app_title{
+    color: white;
+    font-size: 3em;
+    line-height: 550px;
+}
+
+
+.login_page{
+    height: 100vh;
+    display: flex;
+}
+
+.login_image{
+    background-image:url(1226749_m.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    flex: 1;
+}
+
+.login_form{
+    width: 400px;
+    text-align: center;
+}
+
+
+.login_message_title_promisu{
+    color: red;
+}
