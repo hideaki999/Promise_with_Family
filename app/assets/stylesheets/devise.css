@@ -1,7 +1,9 @@
 .app_title{
     color: white;
     font-size: 3em;
-    line-height: 550px;
+    line-height: 500px;
+    margin-left: 70px;
+    text-shadow: 1px 1px 2px black;
 }
 
 
@@ -21,8 +23,16 @@
 .login_form{
     width: 400px;
     text-align: center;
+    padding: 30px;
 }
 
+.login_form_item{
+    padding-top: 50px;
+}
+
+.login_form_item_title{
+    
+}
 
 .login_message_title_promisu{
     color: red;
