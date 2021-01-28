@@ -10,16 +10,6 @@
     width: 100%;
 }
 
-.form_task_new{
-    display: flex;
-    justify-content: center;
-    padding: 50px;
-}
-
-.form_task_new form{
-    font-size: 1.5em;
-}
-
 .task_request_person{
     height: 30px;
 }
@@ -34,22 +24,18 @@
     justify-content: center;
 }
 
-.form dl{
+.form_task_list{
     width: 50%;
 }
 
-.form dl dt {
+.form .form_task_list dt {
     width: 100px;
     float: left;
     clear: both;
 }
 
-.form dl dd{
+.form .form_task_list dd{
     margin-bottom: 50px;
-}
-
-#contact .form dl dd {
-    padding: 10px 0;
 }
 
 .form .name {
@@ -72,7 +58,8 @@
     height: 150px;
 }
 
-.form button {
+.task_create_submit_button,
+.task_edit_submit_button {
     background-color: #C4EAFA;
     color: #000000;
     border:1px solid #000;
@@ -84,7 +71,8 @@
     box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
 }
 
-.form button:hover {
+.task_create_submit_button:hover,
+.task_edit_submit_button:hover {
     cursor: pointer;
     opacity: 0.8;
 }
