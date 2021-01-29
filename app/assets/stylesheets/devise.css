@@ -39,9 +39,18 @@
 }
 
 input[type="email"],
-input[type="password"]{
+input[type="password"],
+input[type="submit"]{
     width: 200px;
     height: 30px;
     border-radius: 5px;
     border: 1px solid #000000;
+}
+
+.field{
+    margin-top: 30px;
+}
+
+.login_button{
+    margin-top: 50px;
 }
