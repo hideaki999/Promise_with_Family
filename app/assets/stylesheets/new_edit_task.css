@@ -19,7 +19,7 @@
     padding: 30px 60px;
 }
 
-.form div{
+.form .form_children,.form_button{
     display: flex;
     justify-content: center;
 }
@@ -28,13 +28,13 @@
     width: 50%;
 }
 
-.form .form_task_list dt {
+.form .form_task_list .form_task_area {
     width: 100px;
     float: left;
     clear: both;
 }
 
-.form .form_task_list dd{
+.form .form_task_list .task_write_area{
     margin-bottom: 50px;
 }
 

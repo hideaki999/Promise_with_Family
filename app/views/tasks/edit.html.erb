@@ -8,25 +8,25 @@
 <form action="#" method="post" class="form task_edit_form">
   <div class="form_children task_edit_form_children">
     <dl class="form_task_list">
-        <dt class="form_task_term_title"><span class="task_title task_edit_title">タイトル</span></dt>
-            <dd class="task_edit_title_area">
+        <dt class="form_task_area form_task_area_title"><span class="task_title task_edit_title">タイトル</span></dt>
+            <dd class="task_write_area task_edit_title_area">
             <input type="text" name="task_yourname" class="task_textbox">
             </dd>
-        <dt class="form_task_term_request"><span class="task_request task_edit_request">依頼者</span></dt>
-            <dd class="task_edit_request_persons_area">
+        <dt class="form_task_area form_task_request"><span class="task_request task_edit_request">依頼者</span></dt>
+            <dd class="task_write_area task_edit_request_persons_area">
                 <select class="task_request_person task_edit_request_person" name="task_request_person">
                     <option value="wife" class="task_edit_request_wife">妻</option>
                     <option value="son" class="task_edit_request_son">息子</option>
                     <option value="daughter" class="task_edit_request_daughter">娘</option>
                 </select>
             </dd>
-        <dt class="task_deadline task_edit_deadline">期限</dt>
-            <dd class="task_edit_day_time_area">
+        <dt class="form_task_area task_create_deadline">期限</dt>
+            <dd class="task_write_area task_edit_day_time_area">
             <label><span class="task_day task_edit_day">日付</span><input type="date" class="task_date"></label>
             <label><span class="task_time task_edit_time">時間</span><input type="time" name="task_time" class="task_time"></label>
             </dd>
-        <dt class="task_details task_edit_details">詳細</dt>
-            <dd class="task_edit_details_area">
+        <dt class="form_task_area task_create_details">詳細</dt>
+            <dd class="task_write_area task_edit_details_area">
                 <textarea name="task_details" class="task_textarea"></textarea>
             </dd>
     </dl>
