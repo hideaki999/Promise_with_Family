@@ -1,16 +1,21 @@
 .app_title{
     color: white;
-    font-size: 3em;
+    font-size: 3.2em;
     line-height: 500px;
     margin-left: 70px;
     text-shadow: 1px 1px 2px black;
     font-family: 'Salsa', cursive;
+    letter-spacing: 3px;
 }
 
 
 .login_page{
     height: 100vh;
     display: flex;
+}
+
+.login_message_title_promisu{
+    text-shadow: 1px 2px 1px rgba(0,0,0,0.3);
 }
 
 .login_image{
@@ -31,6 +36,9 @@
     padding-top: 50px;
 }
 
+.login_form_item_title{
+    font-size: 1.7em;
+}
 
 .login_message_title_promisu{
     color: red;
@@ -43,6 +51,10 @@ input[type="submit"]{
     height: 30px;
     border-radius: 5px;
     border: 1px solid #000000;
+}
+
+.login_email,.login_password{
+    font-size: 0.8em;
 }
 
 .field{
