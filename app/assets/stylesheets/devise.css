@@ -78,3 +78,13 @@ input[type="submit"]{
 .sign_up_messege{
     margin: 20px;
 }
+
+
+.app_title_sign_up{
+    color: rgb(0, 0, 0);
+    font-size: 2.5em;
+    line-height: 1.7em;
+    text-shadow: 1px 1px 1px black;
+    font-family: 'Salsa', cursive;
+    letter-spacing: 3px;
+}
