@@ -5,14 +5,76 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+   @user = User.new 
+  end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+     @user = User.new(sign_up_params)
+     unless @user.valid?
+      flash.now[:alert] = @user.errors.full_messages
+      render :new and return
+     end
+
+      session["devise.regist_data"] = {user: @user.attributes}
+      session["devise.regist_data"][:user]["password"] = params[:user][:password]
+    #  @family = @user.build_family
+    @family = Family.new
+    render :new_family
+   end
+
+  #  def new_family
+  #   @family = Family.new
+  #  end
+
+   def create_family
+    @user = User.new(session["devise.regist_data"]["user"])
+    @user.save
+    binding.pry
+    i = 0
+    family_params.each do |family|
+      @family = Family.new(family)
+      name = family.keys[0]
+      @family.name = family[name]
+      @family.save
+      i += 1
+    end
+    # @family = Family.new(family_params)
+    unless @family.valid?
+      flash.now[:alert] = @family.errors.full_messages
+      render :new_family and return
+    end
+    # @user.build_family(@family.attributes)
+    # @user.save
+    session["devise.regist_data"]["user"].clear
+    sign_in(:user, @user)
+    redirect_to root_path
+   end
+
+   protected
+
+    def configure_sign_up_params
+      devise_parameter_sanitizer.permit(:sign_up, keys:[:name])
+    end
+
+    def family_params
+      familys = []
+      user_id = @user.id
+      family_name1 = params.require(:family).permit(:name, :relationships_id).merge(user_id: user_id)
+      family_name2 = params.require(:family).permit(:name2, :relationships_id).merge(user_id: user_id)
+      family_name3 = params.require(:family).permit(:name3, :relationships_id).merge(user_id: user_id)
+      familys << family_name1
+      unless family_name2.empty?
+        familys << family_name2
+      end
+      unless family_name3.empty?
+        familys << family_name3
+      end
+        
+      familys
+    end
+
 
   # GET /resource/edit
   # def edit

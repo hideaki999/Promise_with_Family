@@ -1,14 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => {
-    :registrations => 'users/registrations',
-    :sessions => 'users/sessions'   
+    :registrations => 'users/registrations'  
   } 
-
   devise_scope :user do
-    get "sign_in", :to => "users/sessions#new"
-    get "sign_out", :to => "users/sessions#destroy" 
+    get  'family', to: 'users/registrations#new_family'
+    post 'family', to: 'users/registrations#create_family'
   end
-
 
 
 
