@@ -31,13 +31,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
    def create_family
     @user = User.new(session["devise.regist_data"]["user"])
     @user.save
-    i = 0
+    # i = 0
     family_params.each do |family|
       @family = Family.new(family)
       name = family.keys[0]
+      relationships_id = family.keys[1]
       @family.name = family[name]
+      @family.relationships_id = family[relationships_id]
       @family.save
-      i += 1
+      # i += 1
     end
     # @family = Family.new(family_params)
     unless @family.valid?
@@ -61,14 +63,22 @@ class Users::RegistrationsController < Devise::RegistrationsController
       familys = []
       user_id = @user.id
       family_name1 = params.require(:family).permit(:name, :relationships_id).merge(user_id: user_id)
-      family_name2 = params.require(:family).permit(:name2, :relationships_id).merge(user_id: user_id)
-      family_name3 = params.require(:family).permit(:name3, :relationships_id).merge(user_id: user_id)
+      family_name2 = params.require(:family).permit(:name2, :relationships_id2).merge(user_id: user_id)
+      family_name3 = params.require(:family).permit(:name3, :relationships_id3).merge(user_id: user_id)
+      family_name4 = params.require(:family).permit(:name4, :relationships_id4).merge(user_id: user_id)
+      family_name5 = params.require(:family).permit(:name5, :relationships_id5).merge(user_id: user_id)
       familys << family_name1
-      unless family_name2.empty?
+      if family_name2[:name2].present? && family_name2[:relationships_id2].present?
         familys << family_name2
       end
-      unless family_name3.empty?
+      if family_name3[:name3].present? && family_name3[:relationships_id3].present?
         familys << family_name3
+      end
+      if family_name4[:name4].present? && family_name4[:relationships_id4].present?
+        familys << family_name4
+      end
+      if family_name5[:name5].present? && family_name5[:relationships_id5].present?
+        familys << family_name5
       end
         
       familys
