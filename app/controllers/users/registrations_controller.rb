@@ -31,7 +31,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
    def create_family
     @user = User.new(session["devise.regist_data"]["user"])
     @user.save
-    binding.pry
     i = 0
     family_params.each do |family|
       @family = Family.new(family)
