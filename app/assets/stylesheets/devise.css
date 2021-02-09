@@ -135,7 +135,20 @@ input[type="submit"]{
     margin: 8px 0 0 15px;
 }
 
+.circle_family{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(253, 0, 0);
+}
 
+#maru1_family::after{
+    width: 125px;
+    position: absolute;
+    content: "";
+    border-bottom: solid rgb(253, 0, 0); 
+    margin: 8px 0 0 15px;
+}
 
 
  
