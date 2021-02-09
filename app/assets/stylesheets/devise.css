@@ -44,6 +44,7 @@
     color: red;
 }
 
+input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="submit"]{
@@ -53,12 +54,20 @@ input[type="submit"]{
     border: 1px solid #000000;
 }
 
+input[type="submit"]{
+    background-color: #C4EAFA;
+}
+
 .login_email,.login_password{
     font-size: 0.8em;
 }
 
 .field{
     margin-top: 30px;
+}
+
+.field_submit{
+    margin-top: 50px;
 }
 
 .login_button{
@@ -84,15 +93,14 @@ input[type="submit"]{
     color: rgb(0, 0, 0);
     font-size: 2.5em;
     line-height: 1.7em;
-    text-shadow: 1px 1px 1px black;
+    /* text-shadow: 1px 1px 1px black; */
     font-family: 'Salsa', cursive;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 .sign_up_page{
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -102,8 +110,21 @@ input[type="submit"]{
     justify-content: space-between;
 }
 
+.sign_up_user_title2,.sign_up_user_title3{
+    color: darkgray;
+}
+
+#sign_up_user_title2_family{
+    color: #000000;
+}
+
+#sign_up_user_title3_family{
+    color: darkgray;
+}
+
 .sign_up_guide{
     width: 300px;
+    margin: 0 auto;
 }
 
 .circle{
@@ -150,5 +171,6 @@ input[type="submit"]{
     margin: 8px 0 0 15px;
 }
 
+.sign_up_form{
 
- 
+}

@@ -3,6 +3,11 @@ ja:
     email: メールアドレス
     password: パスワード
     name: 名前
+    name1: 名前
+    name2: 名前
+    name3: 名前
+    name4: 名前
+    name5: 名前
     group_id: グループ名
     user: ユーザー
     password_confirmation: パスワード確認

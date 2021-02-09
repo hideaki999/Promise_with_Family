@@ -4,9 +4,9 @@
     <h1 class="app_title_sign_up">promise with family</h1>
     <div class="sign_up_guide">
     <div class="sign_up_user_title">
-      <span class="sign_up_user_title1">会員登録</span>
-      <span class="sign_up_user_title2">家族登録</span>
-      <span class="sign_up_user_title3">完了</span>
+      <span class="sign_up_user_title1" id="sign_up_user_title1_family">会員登録</span>
+      <span class="sign_up_user_title2" id="sign_up_user_title2_family">家族登録</span>
+      <span class="sign_up_user_title3" id="sign_up_user_title3_family">完了</span>
     </div>
       <div class="sign_up_guide_illust">
         <div class="circle maru1 circle_family" id="maru1_family"></div>
@@ -21,42 +21,42 @@
   <%= render "devise/shared/error_messages", resource: @family %>
 
   <div class="field">
-    <%= f.select :relationships_id, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "選択して下さい" %>
+    <%= f.select :relationships_id, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "続柄を選択" %>
     <%= f.label :name ,{class: 'sign_up_family_name'}%><br />
     <%= f.text_field :name, autocomplete: "family-name" %>
   </div>
 
   <div class="field">
-    <%= f.select :relationships_id2, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "選択して下さい" %>
+    <%= f.select :relationships_id2, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "続柄を選択" %>
     <%= f.label :name2 ,{class: 'sign_up_family_name2'}%><br />
     <%= f.text_field :name2, autocomplete: "family-name" %>
   </div>
 
   <div class="field">
-    <%= f.select :relationships_id3, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "選択して下さい" %>
+    <%= f.select :relationships_id3, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "続柄を選択" %>
     <%= f.label :name3 ,{class: 'sign_up_family_name3'}%><br />
     <%= f.text_field :name3, autocomplete: "family-name" %>
   </div>
 
   <div class="field">
-    <%= f.select :relationships_id4, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "選択して下さい" %>
+    <%= f.select :relationships_id4, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "続柄を選択" %>
     <%= f.label :name4 ,{class: 'sign_up_family_name4'}%><br />
     <%= f.text_field :name4, autocomplete: "family-name" %>
   </div>
 
   <div class="field">
-    <%= f.select :relationships_id5, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "選択して下さい" %>
+    <%= f.select :relationships_id5, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "続柄を選択" %>
     <%= f.label :name5 ,{class: 'sign_up_family_name5'}%><br />
     <%= f.text_field :name5, autocomplete: "family-name" %>
   </div>
 
 
 
-  <div class="actions">
+  <div class="field_submit">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
 </div>
 
-<%= render "devise/shared/links" %>
+<%# <%= render "devise/shared/links" %> 
 </div>
