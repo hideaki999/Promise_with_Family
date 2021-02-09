@@ -88,3 +88,54 @@ input[type="submit"]{
     font-family: 'Salsa', cursive;
     letter-spacing: 3px;
 }
+
+.sign_up_page{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign_up_user_title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sign_up_guide{
+    width: 300px;
+}
+
+.circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: skyblue;
+}
+
+.sign_up_guide_illust{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.maru1::after{
+    width: 125px;
+    position: absolute;
+    content: "";
+    border-bottom: solid skyblue; 
+    margin: 8px 0 0 15px;
+}
+
+.maru2::after{
+    width: 125px;
+    position: absolute;
+    content: "";
+    border-bottom: solid skyblue;
+    margin: 8px 0 0 15px;
+}
+
+
+
+
+ 
