@@ -2,6 +2,7 @@ ja:
   attributes:
     email: メールアドレス
     password: パスワード
+    name: 名前
     group_id: グループ名
     user: ユーザー
     password_confirmation: パスワード確認
