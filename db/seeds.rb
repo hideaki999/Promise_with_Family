@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+relationships = ['妻','夫','息子','娘','おじいちゃん','おばあちゃん']
+
+6.times do |n|
+Relationship.create!(
+    name: "#{relationships[n]}"
+)
+end
