@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2021_02_01_221701) do
 
   create_table "families", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
-    t.integer "relationships_id"
+    t.integer "relationship_id"
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

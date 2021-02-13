@@ -21,31 +21,31 @@
   <%= render "devise/shared/error_messages", resource: @family %>
 
   <div class="field">
-    <%= f.select :relationships_id, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "続柄を選択" %>
+    <%= f.select :relationship_id, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "続柄を選択" %>
     <%= f.label :name ,{class: 'sign_up_family_name'}%><br />
     <%= f.text_field :name, autocomplete: "family-name" %>
   </div>
 
   <div class="field">
-    <%= f.select :relationships_id2, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "続柄を選択" %>
+    <%= f.select :relationship_id2, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "続柄を選択" %>
     <%= f.label :name2 ,{class: 'sign_up_family_name2'}%><br />
     <%= f.text_field :name2, autocomplete: "family-name" %>
   </div>
 
   <div class="field">
-    <%= f.select :relationships_id3, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "続柄を選択" %>
+    <%= f.select :relationship_id3, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "続柄を選択" %>
     <%= f.label :name3 ,{class: 'sign_up_family_name3'}%><br />
     <%= f.text_field :name3, autocomplete: "family-name" %>
   </div>
 
   <div class="field">
-    <%= f.select :relationships_id4, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "続柄を選択" %>
+    <%= f.select :relationship_id4, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "続柄を選択" %>
     <%= f.label :name4 ,{class: 'sign_up_family_name4'}%><br />
     <%= f.text_field :name4, autocomplete: "family-name" %>
   </div>
 
   <div class="field">
-    <%= f.select :relationships_id5, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "続柄を選択" %>
+    <%= f.select :relationship_id5, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "続柄を選択" %>
     <%= f.label :name5 ,{class: 'sign_up_family_name5'}%><br />
     <%= f.text_field :name5, autocomplete: "family-name" %>
   </div>

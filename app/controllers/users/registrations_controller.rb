@@ -37,7 +37,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       name = family.keys[0]
       relationships_id = family.keys[1]
       @family.name = family[name]
-      @family.relationships_id = family[relationships_id]
+      @family.relationship_id = family[relationships_id]
       @family.save
       # i += 1
     end
@@ -63,22 +63,22 @@ class Users::RegistrationsController < Devise::RegistrationsController
     def family_params
       familys = []
       user_id = @user.id
-      family_name1 = params.require(:family).permit(:name, :relationships_id).merge(user_id: user_id)
-      family_name2 = params.require(:family).permit(:name2, :relationships_id2).merge(user_id: user_id)
-      family_name3 = params.require(:family).permit(:name3, :relationships_id3).merge(user_id: user_id)
-      family_name4 = params.require(:family).permit(:name4, :relationships_id4).merge(user_id: user_id)
-      family_name5 = params.require(:family).permit(:name5, :relationships_id5).merge(user_id: user_id)
+      family_name1 = params.require(:family).permit(:name, :relationship_id).merge(user_id: user_id)
+      family_name2 = params.require(:family).permit(:name2, :relationship_id2).merge(user_id: user_id)
+      family_name3 = params.require(:family).permit(:name3, :relationship_id3).merge(user_id: user_id)
+      family_name4 = params.require(:family).permit(:name4, :relationship_id4).merge(user_id: user_id)
+      family_name5 = params.require(:family).permit(:name5, :relationship_id5).merge(user_id: user_id)
       familys << family_name1
-      if family_name2[:name2].present? && family_name2[:relationships_id2].present?
+      if family_name2[:name2].present? && family_name2[:relationship_id2].present?
         familys << family_name2
       end
-      if family_name3[:name3].present? && family_name3[:relationships_id3].present?
+      if family_name3[:name3].present? && family_name3[:relationship_id3].present?
         familys << family_name3
       end
-      if family_name4[:name4].present? && family_name4[:relationships_id4].present?
+      if family_name4[:name4].present? && family_name4[:relationship_id4].present?
         familys << family_name4
       end
-      if family_name5[:name5].present? && family_name5[:relationships_id5].present?
+      if family_name5[:name5].present? && family_name5[:relationship_id5].present?
         familys << family_name5
       end
         
