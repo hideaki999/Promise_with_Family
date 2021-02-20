@@ -5,7 +5,7 @@
     <h1 class="task_create_main_title">家族タスク作成</h1>
 <div>
 
-<form action="#" method="post" class="form task_create_form">
+<%# <form action="/tasks" method="post" class="form task_create_form">
   <div class="form_children task_create_form_children">
     <dl class="form_task_list">
         <dt class="form_task_area form_task_area_title"><span class="task_title task_create_title">タイトル</span></dt>
@@ -34,7 +34,33 @@
         <div class="form_button task_create_form_button">
             <button type="submit" class="task_create_submit_button">送信</button>
         </div>
-</form>
+</form> %>
 
+
+<%= form_for(@task, html: { class: "form task_create_form"}) do |f| %>
+    <div class="form_children task_create_form_children">
+        <dl class="form_task_list">
+            <dt class="form_task_area form_task_area_title"><span class="task_title task_create_title">タイトル</span></dt>
+                <dd class="task_write_area task_create_title_area">
+                    <%= f.text_field :title, class: "task_textbox" %>
+                </dd>
+            <dt class="form_task_area form_task_request"><span class="task_request task_create_request">依頼者</span></dt>
+                <dd class="task_write_area task_create_request_persons_area">
+                    <%= f.select :families_id, [ ["妻",1], ["夫", 2], ["息子", 3 ] ,["娘", 4], ["おじいちゃん", 5], ["おばあちゃん", 6] ], prompt: "依頼者を選択してください", class: "task_request_person task_create_request_person" %>
+                </dd>
+            <dt class="form_task_area task_create_deadline">期限</dt>
+                <dd class="task_write_area task_create_day_time_area">
+                    <label><span class="task_day task_create_day">日付:時間</span><%= f.datetime_field :deadline_at, class: "task_date"%></label>
+                </dd>
+            <dt class="form_task_area task_create_details">詳細</dt>
+                <dd class="task_write_area task_create_details_area">
+                    <%= f.text_area :details, class: "task_textarea" %>
+                </dd>
+        </dl>
+    </div>   
+        <div class="form_button task_create_form_button">
+            <%= f.submit "送信" , class: "task_create_submit_button"%>
+        </div>        
+<% end %>
 
 
