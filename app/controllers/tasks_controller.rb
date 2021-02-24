@@ -13,7 +13,12 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = Task.new
+    @task = Task.find(params[:id])
+  end
+
+  def update
+    task = Task.find(params[:id])
+    task.update(task_prams)
   end
 
 
