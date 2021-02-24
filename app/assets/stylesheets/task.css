@@ -177,3 +177,14 @@ a.btn-blue.btn-cubic {
     display:block;
     color: #038698;
 }
+
+
+/* error */
+#error_explanation{
+    color: red;
+    display: flex;
+    justify-content: center;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+
