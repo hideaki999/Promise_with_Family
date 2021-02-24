@@ -26,9 +26,13 @@ class TasksController < ApplicationController
   end
 
   def update
-    task = Task.find(params[:id])
-    task.update(task_prams)
-    redirect_to action: :index
+    @message = fight_message
+    @task = Task.find(params[:id])
+    if @task.update(task_prams)
+      redirect_to action: :index
+    else
+      render action: :new
+    end
   end
 
   def destroy

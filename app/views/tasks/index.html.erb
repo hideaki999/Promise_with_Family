@@ -28,7 +28,11 @@
         
         <% @tasks.each do |task|%>
         <div class="task">
-            <p class="task_time"><%= "#{task.deadline_at}まで" %></p>
+        <% if task.deadline_at.present? %>
+            <p class="task_time"><%= "#{task.deadline_at.strftime("%Y/%m/%d %H:%M")}まで" %></p>
+        <% else %>
+            <p class="task_time"><%= "期限なし" %></p>
+        <%end%>
             <h3 class="task_title"><%= task.title %></h3>
             <p class="task_details"><%= task.details %></p>
             <div class="task_edit_delete">
