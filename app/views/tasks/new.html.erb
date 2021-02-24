@@ -38,6 +38,17 @@
 
 
 <%= form_for(@task, html: { class: "form task_create_form"}) do |f| %>
+    <% if @task.errors.any? %>
+    <div id="error_explanation">
+      <h3>入力した内容にエラーが<%= @task.errors.count %>件あります</h3>
+
+      <ul>
+        <% @task.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
     <div class="form_children task_create_form_children">
         <dl class="form_task_list">
             <dt class="form_task_area form_task_area_title"><span class="task_title task_create_title">タイトル</span></dt>

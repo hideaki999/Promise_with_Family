@@ -33,7 +33,7 @@
             <p class="task_details"><%= task.details %></p>
             <div class="task_edit_delete">
                 <p class="task_request_name">依頼者 妻</p>
-                <p><%= link_to "編集", "/tasks/#{task.id}/edit" , class:"task_edit"%>   <%= link_to "削除", "/tasks/#{task.id}", class: "task_delete",method: :delete %></p>
+                <p><%= link_to "編集", "/tasks/#{task.id}/edit" , class:"task_edit"%>   <%= link_to "削除", "/tasks/#{task.id}", class: "task_delete",method: :delete,data: { confirm: "削除しますか？" } %></p>
             </div>
         </div>
         <% end %>
