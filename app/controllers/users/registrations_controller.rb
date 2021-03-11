@@ -10,18 +10,17 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   # POST /resource
-  def create
+   def create
      @user = User.new(sign_up_params)
-     unless @user.valid? && @user[:name].present?
-      flash.now[:alert] = @user.errors.full_messages
-      render :new and return
-     end
-
+    if @user.valid? && @user[:name].present?
       session["devise.regist_data"] = {user: @user.attributes}
       session["devise.regist_data"][:user]["password"] = params[:user][:password]
-    #  @family = @user.build_family
-    @family = Family.new
-    render :new_family
+      @family = Family.new
+      render :new_family
+    else
+      flash.now[:alert] = @user.errors.full_messages
+      render :new and return
+    end
    end
 
   #  def new_family
