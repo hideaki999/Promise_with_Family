@@ -23,30 +23,19 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
    end
 
-  #  def new_family
-  #   @family = Family.new
-  #  end
-
    def create_family
     @user = User.new(session["devise.regist_data"]["user"])
     @user.save
-    # i = 0
+
     family_params.each do |family|
-      @family = Family.new(family)
-      name = family.keys[0]
-      relationships_id = family.keys[1]
-      @family.name = family[name]
-      @family.relationship_id = family[relationships_id]
-      @family.save
-      # i += 1
+      family_new = Family.new(family)
+      family_new.family_create(family_new,family)
     end
-    # @family = Family.new(family_params)
-    unless @family.valid?
-      flash.now[:alert] = @family.errors.full_messages
-      render :new_family and return
-    end
-    # @user.build_family(@family.attributes)
-    # @user.save
+
+    # unless family_new.valid?
+    #     flash.now[:alert] = @family.errors.full_messages
+    #     render :new_family and return
+    # end
     session["devise.regist_data"]["user"].clear
     sign_in(:user, @user)
     redirect_to root_path
