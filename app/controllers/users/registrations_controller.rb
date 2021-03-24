@@ -50,28 +50,50 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
     def family_params
       familys = []
+      familys_register = []
+      n = 0
       user_id = @user.id
-      family_name1 = params.require(:family).permit(:name, :relationship_id).merge(user_id: user_id)
-      family_name2 = params.require(:family).permit(:name2, :relationship_id2).merge(user_id: user_id)
-      family_name3 = params.require(:family).permit(:name3, :relationship_id3).merge(user_id: user_id)
-      family_name4 = params.require(:family).permit(:name4, :relationship_id4).merge(user_id: user_id)
-      family_name5 = params.require(:family).permit(:name5, :relationship_id5).merge(user_id: user_id)
-      familys << family_name1
-      if family_name2[:name2].present? && family_name2[:relationship_id2].present?
-        familys << family_name2
+
+      params_familys = params.require(:family).delete_if{|k,v| v == ""}
+      params_familys.each_key {|key|
+      familys_register << params_familys.permit(key)
+      }
+
+      while  n <= familys_register.length
+        if familys_register[n].present? and familys_register[n + 1].present?
+          familys << familys_register[n].merge(familys_register[n + 1]).merge(user_id: user_id)
+        end
+        n += 2
       end
-      if family_name3[:name3].present? && family_name3[:relationship_id3].present?
-        familys << family_name3
-      end
-      if family_name4[:name4].present? && family_name4[:relationship_id4].present?
-        familys << family_name4
-      end
-      if family_name5[:name5].present? && family_name5[:relationship_id5].present?
-        familys << family_name5
-      end
-        
-      familys
+      binding.pry
+      return familys
     end
+
+    # def family_params
+    #   familys = []
+    #   user_id = @user.id
+    #   binding.pry
+    #   family_name1 = params.require(:family).permit(:name, :relationship_id).merge(user_id: user_id)
+    #   family_name2 = params.require(:family).permit(:name2, :relationship_id2).merge(user_id: user_id)
+    #   family_name3 = params.require(:family).permit(:name3, :relationship_id3).merge(user_id: user_id)
+    #   family_name4 = params.require(:family).permit(:name4, :relationship_id4).merge(user_id: user_id)
+    #   family_name5 = params.require(:family).permit(:name5, :relationship_id5).merge(user_id: user_id)
+    #   familys << family_name1
+    #   if family_name2[:name2].present? && family_name2[:relationship_id2].present?
+    #     familys << family_name2
+    #   end
+    #   if family_name3[:name3].present? && family_name3[:relationship_id3].present?
+    #     familys << family_name3
+    #   end
+    #   if family_name4[:name4].present? && family_name4[:relationship_id4].present?
+    #     familys << family_name4
+    #   end
+    #   if family_name5[:name5].present? && family_name5[:relationship_id5].present?
+    #     familys << family_name5
+    #   end
+        
+    #   familys
+    # end
 
 
   # GET /resource/edit
