@@ -59,20 +59,24 @@ class Users::RegistrationsController < Devise::RegistrationsController
       familys_register << params_familys.permit(key)
       }
 
-      while  n <= familys_register.length
-        if familys_register[n].present? and familys_register[n + 1].present?
+      familys_register_num = familys_register.length/2
+
+      familys_register_num.times do
+        if familys_register[n].present? && familys_register[n + 1].present?
           familys << familys_register[n].merge(familys_register[n + 1]).merge(user_id: user_id)
+          puts familys
         end
         n += 2
       end
-      binding.pry
+
+      familys = familys.uniq
       return familys
+
     end
 
     # def family_params
     #   familys = []
     #   user_id = @user.id
-    #   binding.pry
     #   family_name1 = params.require(:family).permit(:name, :relationship_id).merge(user_id: user_id)
     #   family_name2 = params.require(:family).permit(:name2, :relationship_id2).merge(user_id: user_id)
     #   family_name3 = params.require(:family).permit(:name3, :relationship_id3).merge(user_id: user_id)
