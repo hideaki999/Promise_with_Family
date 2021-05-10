@@ -15,18 +15,33 @@
       </div>
     </div>
   </div>
-
+  
 <div class="sign_up_form">
 <%= form_for(@family,url: family_path) do |f| %>
   <%= render "devise/shared/error_messages", resource: @family %>
-
-  <div class="field">
+<div id="form">
+  <div class="field" id="add_field">
     <%= f.select :relationship_id, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "続柄を選択" %>
     <%= f.label :name ,{class: 'sign_up_family_name'}%><br />
     <%= f.text_field :name, autocomplete: "family-name" %>
   </div>
+  <input type="button" value="フォーム追加" onclick="addForm()" >
+</div>
+  <div class="field_submit">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+</div>
 
-  <div class="field">
+<%# <%= render "devise/shared/links" %> 
+</div>
+
+
+
+<%
+=begin
+%>
+   <div class="field">
     <%= f.select :relationship_id2, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "続柄を選択" %>
     <%= f.label :name2 ,{class: 'sign_up_family_name2'}%><br />
     <%= f.text_field :name2, autocomplete: "family-name" %>
@@ -49,14 +64,6 @@
     <%= f.label :name5 ,{class: 'sign_up_family_name5'}%><br />
     <%= f.text_field :name5, autocomplete: "family-name" %>
   </div>
-
-
-
-  <div class="field_submit">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-</div>
-
-<%# <%= render "devise/shared/links" %> 
-</div>
+<%
+=end
+%>

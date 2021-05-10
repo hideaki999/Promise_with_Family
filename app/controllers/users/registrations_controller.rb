@@ -49,6 +49,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
 
     def family_params
+      binding.pry
       familys = []
       familys_register = []
       n = 0
