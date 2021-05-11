@@ -20,12 +20,20 @@
 <%= form_for(@family,url: family_path) do |f| %>
   <%= render "devise/shared/error_messages", resource: @family %>
 <div id="form">
+  <div class="add_form_icon">
+    <div class="icon icon--plus">
+      <span class="icon__mark"></span>
+    </div>
+    <div class="add_form">
+      <input type="button" value="フォーム追加" onclick="addForm()" >
+    </div>
+  </div>
+
   <div class="field" id="add_field">
     <%= f.select :relationship_id, [["妻", "1"], ["夫", "2"], ["息子", "3"], ["娘", "4"],["おじいちゃん", "5"],["おばあちゃん", "6"]], include_blank: "続柄を選択" %>
     <%= f.label :name ,{class: 'sign_up_family_name'}%><br />
     <%= f.text_field :name, autocomplete: "family-name" %>
   </div>
-  <input type="button" value="フォーム追加" onclick="addForm()" >
 </div>
   <div class="field_submit">
     <%= f.submit "Sign up" %>
