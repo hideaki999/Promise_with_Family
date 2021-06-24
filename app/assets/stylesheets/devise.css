@@ -1,0 +1,221 @@
+.app_title {
+  color: white;
+  font-size: 3.2em;
+  line-height: 500px;
+  margin-left: 70px;
+  text-shadow: 1px 1px 2px black;
+  font-family: "Salsa", cursive;
+  letter-spacing: 3px;
+}
+
+.login_page {
+  height: 100vh;
+  display: flex;
+}
+
+.login_message_title_promisu {
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.login_image {
+  background-image: url(1226749_m.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  flex: 1;
+}
+
+.login_form {
+  width: 400px;
+  text-align: center;
+  padding: 30px;
+}
+
+.login_form_item {
+  padding-top: 50px;
+}
+
+.login_form_item_title {
+  font-size: 1.7em;
+}
+
+.login_message_title_promisu {
+  color: red;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"] {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+
+input[type="submit"] {
+  background-color: #c4eafa;
+}
+
+.login_email,
+.login_password {
+  font-size: 0.8em;
+}
+
+.field {
+  margin-top: 30px;
+}
+
+.field_submit {
+  margin-top: 50px;
+}
+
+.login_button {
+  margin-top: 50px;
+}
+
+.login_button input {
+  background-color: #c4eafa;
+  font-size: 0.8em;
+}
+/* sign_up */
+
+.sign_up {
+  color: rgb(43, 103, 231);
+}
+
+.sign_up_messege {
+  margin: 20px;
+}
+
+.app_title_sign_up {
+  color: rgb(0, 0, 0);
+  font-size: 2.5em;
+  line-height: 1.7em;
+  /* text-shadow: 1px 1px 1px black; */
+  font-family: "Salsa", cursive;
+  letter-spacing: 2px;
+}
+
+.sign_up_page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign_up_user_title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sign_up_user_title2,
+.sign_up_user_title3 {
+  color: darkgray;
+}
+
+#sign_up_user_title2_family {
+  color: #000000;
+}
+
+#sign_up_user_title3_family {
+  color: darkgray;
+}
+
+.sign_up_guide {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: skyblue;
+}
+
+.sign_up_guide_illust {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.maru1::after {
+  width: 125px;
+  position: absolute;
+  content: "";
+  border-bottom: solid skyblue;
+  margin: 8px 0 0 15px;
+}
+
+.maru2::after {
+  width: 125px;
+  position: absolute;
+  content: "";
+  border-bottom: solid skyblue;
+  margin: 8px 0 0 15px;
+}
+
+.circle_family {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgb(253, 0, 0);
+}
+
+#maru1_family::after {
+  width: 125px;
+  position: absolute;
+  content: "";
+  border-bottom: solid rgb(253, 0, 0);
+  margin: 8px 0 0 15px;
+}
+
+.icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 50%;
+}
+
+.icon::before,
+.icon--plus::after {
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-top: 2px solid #fff;
+  transform: translateX(-50%);
+}
+
+.icon--plus:after {
+  top: 3px;
+  left: -3px;
+  transform: rotate(90deg);
+}
+
+.add_form_icon {
+  display: flex;
+  align-items: center;
+}
+
+.add_form input[type="button"] {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #67c5ff;
+  border: dashed 1px #67c5ff;
+  background: #f2fcff;
+  border-radius: 3px;
+  transition: 0.4s;
+  margin: 15px;
+}
+
+.add_form input[type="button"]:hover {
+  background: #cbedff;
+  color: #fff;
+}

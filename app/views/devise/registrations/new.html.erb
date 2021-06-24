@@ -1,0 +1,55 @@
+
+<div class="sign_up_page">
+  <div class="sign_up_title">
+    <h1 class="app_title_sign_up">promise with family</h1>
+    <div class="sign_up_guide">
+      <div class="sign_up_user_title">
+        <span class="sign_up_user_title1">会員登録</span>
+        <span class="sign_up_user_title2">家族登録</span>
+        <span class="sign_up_user_title3">完了</span>
+      </div>
+      <div class="sign_up_guide_illust">
+        <div class="circle maru1"></div>
+        <div class="circle maru2"></div>
+        <div class="circle maru3"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sign_up_form">
+    <%= form_for(@user,url: user_registration_path) do |f| %>
+      <%= render "devise/shared/error_messages", resource: @user %>
+
+      <div class="field">
+        <%= f.label :name %><br />
+        <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+      </div>
+
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password,{class: 'sign_up_password'} %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> 文字以上)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation ,{class: 'sign_up_password_confirmation'}%><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      </div>
+
+      <div class="field_submit">
+        <%= f.submit "next" %>
+      </div>
+    <% end %>
+  </div>
+  <%# <%= render "devise/shared/links" %> 
+</div>
+
+

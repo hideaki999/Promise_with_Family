@@ -14,7 +14,7 @@
             </div>
 
             <div class="logout_button">
-                <%= link_to root_path ,class: "btn btn-blue btn-radius btn-cubic" do %>
+                <%= link_to destroy_user_session_path ,method: "delete",class: "btn btn-blue btn-radius btn-cubic" do %>
                     <i class="fas fa-angle-right fa-position-right"></i>ログアウト
                 <% end %>
             </div>

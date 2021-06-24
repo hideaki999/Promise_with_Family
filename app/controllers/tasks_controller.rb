@@ -1,6 +1,8 @@
 class TasksController < ApplicationController
-  # def index
-  # end
+
+  def index
+    @user = User.find(current_user.id)
+  end
 
   def new
   end
