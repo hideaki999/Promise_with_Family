@@ -1,0 +1,112 @@
+.task_create_main_title{
+    text-align: center;
+    padding-top: 100px;
+    width: 100%;
+}
+
+.task_edit_main_title{
+    text-align: center;
+    padding-top: 100px;
+    width: 100%;
+}
+
+.task_request_person{
+    height: 30px;
+}
+
+
+.form {
+    padding: 30px 60px;
+}
+
+.form .form_children,.form_button{
+    display: flex;
+    justify-content: center;
+}
+
+.form_task_list{
+    width: 50%;
+}
+
+.form .form_task_list .form_task_area {
+    width: 100px;
+    float: left;
+    clear: both;
+}
+
+.form .form_task_list .task_write_area{
+    margin-bottom: 50px;
+}
+
+.form .name {
+    width: 240px;
+    height: 20px;
+}
+
+.form .email {
+    width: 300px;
+    height: 20px;
+}
+
+.form .tel {
+    width: 240px;
+    height: 20px;
+}
+
+.form .message {
+    width: 360px;
+    height: 150px;
+}
+
+.task_create_submit_button,
+.task_edit_submit_button {
+    background-color: #C4EAFA;
+    color: #000000;
+    border:1px solid #000;
+    font-size: 1em;
+    width: 200px;
+    display: block;
+    line-height: 40px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+}
+
+.task_create_submit_button:hover,
+.task_edit_submit_button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.task_day{
+    margin-right: 10px;
+}
+
+.task_time{
+    margin: 0 10px;
+}
+
+.form_children input{
+    border-radius: 5px;
+    border:1px solid #ccc;
+    height: 30px;
+}
+
+.form_children select{
+    border-radius: 5px;
+    border:1px solid #ccc;
+}
+
+.form_children textarea{
+    border-radius: 5px;
+    border:1px solid #ccc;
+}
+
+.task_textbox{
+    width: 500px; 
+    height: 30px;
+}
+
+.task_textarea{
+    width: 500px; 
+    height: 100px;
+}
